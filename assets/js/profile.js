@@ -20,6 +20,7 @@ const username = document.querySelector('.username');
 const gridbox = document.querySelector('.gridbox');
 const profileImg = document.querySelector('.profile__img');
 const profileBox = document.querySelector('.profile__box');
+const count = document.getElementById('count');
 
 
 // DISPLAY USERNAME
@@ -35,6 +36,17 @@ profileImg.addEventListener('click', () => {
 
 
 
+//NUMBER OF RECORDS
+function getCount(){
+
+    firebase.database().ref('instaPost').once("value", function(snapshot){
+
+        count.innerHTML = snapshot.numChildren();
+    })
+
+}
+
+getCount();
 
 
 
@@ -57,6 +69,7 @@ function getUserData(){
         });
         gridbox.innerHTML = output;
     })
+    getCount();
 }
 
 getUserData();

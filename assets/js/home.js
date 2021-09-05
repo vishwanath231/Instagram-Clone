@@ -106,6 +106,7 @@ getUserData();
 // ALREADY INSET THE POST
 function getData(){
     firebase.database().ref('pictures').once('value', function(records){
+
         let output = '';
         let output_1 = '';
         let output_2 = '';
