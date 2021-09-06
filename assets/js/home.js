@@ -195,7 +195,7 @@ getData();
    
 // DELETE THE POST
 function dotFun(id){
-    firebase.database().ref('userPost/'+id).remove();
+    firebase.database().ref('instaPost/'+id).remove();
     getUserData();
 }
 
