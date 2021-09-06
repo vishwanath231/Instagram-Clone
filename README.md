@@ -4,7 +4,7 @@
 **Languages**
 ```
 1.HTML
-2.CSS
+2.CS
 3.JAVASCRIPT
 ```
 **Features**
